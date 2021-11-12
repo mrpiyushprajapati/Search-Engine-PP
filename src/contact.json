@@ -1,0 +1,23 @@
+[
+    {
+      "id": "1",
+      "name": "Ankit Sir",
+      "imgURL": "https://picsum.photos/200",
+      "phone": "+91 3234442729",
+      "email": "ankit@dummmymail.com"
+    },
+    {
+      "id": "2",
+      "name": "Sanchit Sir",
+      "imgURL": "https://picsum.photos/200",
+      "phone": "+91 324623323",
+      "email": "sanchit@dummymail.com"
+    },
+    {
+      "id": "3",
+      "name": "Shubham Sir",
+      "imgURL": "https://picsum.photos/200",
+      "phone": "+91 986312574",
+      "email": "shubham@dummymail.com"
+    }
+]
