@@ -1,7 +1,7 @@
 import Data from "./samplejson.json";
 import { SendData } from "./msearch";
 
-function Searchhh(props) {
+function Search(props) {
   return (
     <div>
       {Data.filter((val) => {
@@ -13,7 +13,7 @@ function Searchhh(props) {
       }).map((val, key) => {
         return (
           <div className="data" key={key}>
-            <p>{val.title0.name}</p>
+            <p>{val.title1.name}</p>
           </div>
         );
       })}
@@ -21,4 +21,4 @@ function Searchhh(props) {
   );
 }
 
-export default Searchhh;
+export default Search;
