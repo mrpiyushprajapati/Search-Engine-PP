@@ -35,7 +35,8 @@ function Search() {
             >
               {val.title}
             </p>
-            {console.log(sObj)}
+            <SSearch name={sObj} />
+            {/* {console.log(sObj)} */}
           </div>
         );
       })}
