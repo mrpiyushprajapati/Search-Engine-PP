@@ -1,22 +1,30 @@
 import Data from "./samplejson.json";
-import { SendData } from "./msearch";
+import { useEffect, useState } from "react";
 
-function Search(props) {
+function Search({ mval, setSol }) {
+  const [list, setList] = useState();
+
+  useEffect(() => {
+    if (!mval) {
+      setList(null);
+      return;
+    }
+    setList(
+      Data.find((_val) => {
+        return _val.id === mval;
+      })?.title1
+    );
+  }, [mval]);
   return (
     <div>
-      {Data.filter((val) => {
-        if (props.name == "") {
-          return val;
-        } else if (val.title.includes(props.name)) {
-          return val;
-        }
-      }).map((val, key) => {
-        return (
-          <div className="data" key={key}>
-            <p>{val.title1.name}</p>
-          </div>
-        );
-      })}
+      {list &&
+        Object.entries(list).map(([name, val]) => {
+          return (
+            <div className="data" key={name}>
+              <p>{val}</p>
+            </div>
+          );
+        })}
     </div>
   );
 }

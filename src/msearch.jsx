@@ -1,22 +1,17 @@
 import Data from "./samplejson.json";
 import { useState } from "react";
-import SSearch from "./ssearch";
-import Clickhandle from "./clickhandle";
 
-function SendData(sObj) {
-  <Clickhandle name={sObj} />;
-}
+function Search({ val, setVal }) {
+  console.log(Data);
+  const [searchTerm, setSearchterm] = useState("");
 
-function Search() {
-  const [searchTerm, setSeacrhterm] = useState("");
-  const [sObj, setSObj] = useState("");
   return (
     <div>
       <input
         type="text"
         placeholder="Search"
         onChange={(event) => {
-          setSeacrhterm(event.target.value);
+          setSearchterm(event.target.value);
         }}
       />
       {Data.filter((val) => {
@@ -27,16 +22,15 @@ function Search() {
         }
       }).map((val, key) => {
         return (
-          <div className="data" key={key}>
-            <p
-              onClick={(event) => {
-                setSObj(event.target.textContent);
-              }}
-            >
-              {val.title}
-            </p>
-            <SSearch name={sObj} />
-            {console.log(sObj)}
+          <div
+            className="data"
+            key={key}
+            onClick={(event) => {
+              console.log(val.id);
+              setVal(val.id);
+            }}
+          >
+            <p>{val.title}</p>
           </div>
         );
       })}
@@ -45,4 +39,3 @@ function Search() {
 }
 
 export default Search;
-export { SendData };

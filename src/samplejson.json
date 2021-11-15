@@ -3,80 +3,80 @@
     "id":"1",
     "title":"Apex Class",
     "title1":{
-      "name":"AC 1",
-      "name":"AC 2",
-      "name":"AC 3",
-      "name":"AC 4",
-      "name":"AC 5",
-      "name":"AC 6",
-      "name":"AC 7",
-      "name":"AC 8",
-      "name":"AC 9",
-      "name":"AC 10"
+      "name1":"AC 1",
+      "name2":"AC 2",
+      "name3":"AC 3",
+      "name4":"AC 4",
+      "name5":"AC 5",
+      "name6":"AC 6",
+      "name7":"AC 7",
+      "name8":"AC 8",
+      "name9":"AC 9",
+      "name10":"AC 10"
     }
   },
   {
     "id":"2",
     "title":"LWC",
     "title1":{
-      "name":"LWC 1",
-      "name":"LWC 2",
-      "name":"LWC 3",
-      "name":"LWC 4",
-      "name":"LWC 5",
-      "name":"LWC 6",
-      "name":"LWC 7",
-      "name":"LWC 8",
-      "name":"LWC 9",
-      "name":"LWC 10"
+      "name1":"LWC 1",
+      "name2":"LWC 2",
+      "name3":"LWC 3",
+      "name4":"LWC 4",
+      "name5":"LWC 5",
+      "name6":"LWC 6",
+      "name7":"LWC 7",
+      "name8":"LWC 8",
+      "name9":"LWC 9",
+      "name10":"LWC 10"
     }
   },
   {
     "id":"3",
     "title":"Objects",
     "title1":{
-      "name":"O 1",
-      "name":"O 2",
-      "name":"O 3",
-      "name":"O 4",
-      "name":"O 5",
-      "name":"O 6",
-      "name":"O 7",
-      "name":"O 8",
-      "name":"O 9",
-      "name":"O 10"
+      "name1":"O 1",
+      "name2":"O 2",
+      "name3":"O 3",
+      "name4":"O 4",
+      "name5":"O 5",
+      "name6":"O 6",
+      "name7":"O 7",
+      "name8":"O 8",
+      "name9":"O 9",
+      "name10":"O 10"
     }
   },
   {
     "id":"4",
     "title":"Fields",
     "title1":{
-      "name":"F 1",
-      "name":"F 2",
-      "name":"F 3",
-      "name":"F 4",
-      "name":"F 5",
-      "name":"F 6",
-      "name":"F 7",
-      "name":"F 8",
-      "name":"F 9",
-      "name":"F 10"
+      "name1":"F 1",
+      "name2":"F 2",
+      "name3":"F 3",
+      "name4":"F 4",
+      "name5":"F 5",
+      "name6":"F 6",
+      "name7":"F 7",
+      "name8":"F 8",
+      "name9":"F 9",
+      "name10":"F 10"
     }
   },
   {
     "id":"5",
     "title":"Approved Press",
     "title1":{
-      "name":"AP 1",
-      "name":"AP 2",
-      "name":"AP 3",
-      "name":"AP 4",
-      "name":"AP 5",
-      "name":"AP 6",
-      "name":"AP 7",
-      "name":"AP 8",
-      "name":"AP 9",
-      "name":"AP 10"
+      "name1":"AP 1",
+      "name2":"AP 2",
+      "name3":"AP 3",
+      "name4":"AP 4",
+      "name5":"AP 5",
+      "name6":"AP 6",
+      "name7":"AP 7",
+      "name8":"AP 8",
+      "name9":"AP 9",
+      "name10":"AP 10"
     }
   }
 ]
