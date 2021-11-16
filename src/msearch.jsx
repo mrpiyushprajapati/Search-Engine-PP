@@ -2,7 +2,6 @@ import Data from "./samplejson.json";
 import { useState } from "react";
 
 function Search({ val, setVal }) {
-  console.log(Data);
   const [searchTerm, setSearchterm] = useState("");
 
   return (
@@ -26,7 +25,6 @@ function Search({ val, setVal }) {
             className="data"
             key={key}
             onClick={(event) => {
-              console.log(val.id);
               setVal(val.id);
             }}
           >

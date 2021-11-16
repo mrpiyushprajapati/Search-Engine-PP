@@ -1,5 +1,8 @@
 import Data from "./samplejson.json";
 import { useEffect, useState } from "react";
+import AddIcon from "@material-ui/icons/Add";
+import Fab from "@material-ui/core/Fab";
+import Zoom from "@material-ui/core/Zoom";
 
 function Search({ mval, setSol }) {
   const [list, setList] = useState();
@@ -26,29 +29,31 @@ function Search({ mval, setSol }) {
         }}
       />
       {list &&
-        Object.entries(list).map(([name, val]) => {
-          return (
-            <div>
-              {{ val }
-                .filter((value) => {
-                  if (searchTerm == "") {
-                    return value;
-                  } else if (
-                    value.toLowerCase().includes(searchTerm.toLowerCase())
-                  ) {
-                    return value;
-                  }
-                })
-                .map((value, key) => {
-                  return (
-                    <div className="data" key={key}>
-                      <p>{value}</p>
-                    </div>
-                  );
-                })}
-            </div>
-          );
-        })}
+        Object.entries(list)
+          .filter((val) => {
+            {
+              /* console.log(val); */
+            }
+            if (searchTerm == "") {
+              return val;
+            } else if (
+              val[1].toLowerCase().includes(searchTerm.toLowerCase())
+            ) {
+              return val;
+            }
+          })
+          .map(([name, val]) => {
+            return (
+              <div className="data">
+                <p>
+                  {val}{" "}
+                  <Fab>
+                    <AddIcon />
+                  </Fab>
+                </p>
+              </div>
+            );
+          })}
     </div>
   );
 }

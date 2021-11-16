@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Header from "./header";
 import MSearch from "./msearch";
-import SSearch from "./ssearch";
+import SSearch from "./s";
 
 function App() {
   const [val, setVal] = useState();
