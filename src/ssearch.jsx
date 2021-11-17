@@ -1,22 +1,61 @@
 import Data from "./samplejson.json";
-import { SendData } from "./msearch";
+import { useEffect, useState } from "react";
+import AddIcon from "@material-ui/icons/Add";
 
-function Search(props) {
+function Search({ mval, setDcobj }) {
+  const [list, setList] = useState();
+  const [searchTerm, setSearchterm] = useState("");
+
+  useEffect(() => {
+    if (!mval) {
+      setList(null);
+      return;
+    }
+    setList(
+      Data.find((_val) => {
+        return _val.id === mval;
+      })?.title1
+    );
+  }, [mval]);
   return (
     <div>
-      {Data.filter((val) => {
-        if (props.name == "") {
-          return val;
-        } else if (val.title.includes(props.name)) {
-          return val;
-        }
-      }).map((val, key) => {
-        return (
-          <div className="data" key={key}>
-            <p>{val.title1.name}</p>
-          </div>
-        );
-      })}
+      <input
+        type="text"
+        placeholder="Search"
+        onChange={(event) => {
+          setSearchterm(event.target.value);
+        }}
+      />
+      {list &&
+        Object.entries(list)
+          .filter((val) => {
+            {
+              /* console.log(val); */
+            }
+            if (searchTerm === "") {
+              return val;
+            } else if (
+              val[1].toLowerCase().includes(searchTerm.toLowerCase())
+            ) {
+              return val;
+            }
+          })
+          .map(([name, val]) => {
+            return (
+              <div className="data">
+                <p>
+                  {val}{" "}
+                  <button
+                    onClick={() => {
+                      setDcobj(val);
+                    }}
+                  >
+                    <AddIcon />
+                  </button>
+                </p>
+              </div>
+            );
+          })}
     </div>
   );
 }
