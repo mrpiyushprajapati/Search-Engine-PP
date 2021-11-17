@@ -14,7 +14,7 @@ function Search({ val, setVal }) {
         }}
       />
       {Data.filter((val) => {
-        if (searchTerm == "") {
+        if (searchTerm === "") {
           return val;
         } else if (val.title.toLowerCase().includes(searchTerm.toLowerCase())) {
           return val;
@@ -28,7 +28,7 @@ function Search({ val, setVal }) {
               setVal(val.id);
             }}
           >
-            <p>{val.title}</p>
+            <p className="clickable">{val.title}</p>
           </div>
         );
       })}

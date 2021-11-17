@@ -1,11 +1,12 @@
 import React, { useState } from "react";
 import Header from "./header";
 import MSearch from "./msearch";
-import SSearch from "./s";
+import SSearch from "./ssearch";
+import Dc from "./dc";
 
 function App() {
   const [val, setVal] = useState();
-  const [sol, setSol] = useState();
+  const [dcobj, setDcobj] = useState();
 
   return (
     <div>
@@ -16,7 +17,11 @@ function App() {
       </div>
       <div className="obj">
         <h1 className="heading">S Objects</h1>
-        <SSearch mval={val} setSol={setSol} />
+        <SSearch mval={val} setDcobj={setDcobj} />
+      </div>
+      <div className="obj">
+        <h1 className="heading">Deployment Cluster</h1>
+        <Dc val={dcobj} />
       </div>
     </div>
   );
