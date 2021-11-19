@@ -1,15 +1,31 @@
 import { useState } from "react";
 
 function Dc({ val }) {
-  const [value, setValue] = useState([]);
+  const [value, setValue] = useState();
 
-  return <p>{val}</p>;
 
-  //   setValue((prevNotes) => {
-  //     return [...prevNotes, val];
-  //   });
+  // let arr=[]
+  //   value.push(val)
+  //   value.map((x)=>{
+  //     arr.push(<p>{x}</p>)
+  //   })
 
-  //   return <p>{value}</p>;
+  // return(
+  //   <div className="data">
+  //   <p>{arr}</p>
+  //   </div>);
+
+  setValue((prevVal)=>{
+    return{
+      ...prevVal,val
+    };
+  });
+
+    return(
+    <div className="data">
+    <p>{value}</p>
+    </div>);
+
 }
 
 export default Dc;
