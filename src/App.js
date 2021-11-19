@@ -7,6 +7,11 @@ import Dc from "./dc";
 function App() {
   const [val, setVal] = useState();
   const [dcobj, setDcobj] = useState();
+  const [dc, setDc] = useState([]);
+
+  setDc((prevNotes) => {
+    return [...prevNotes, dcobj];
+  });
 
   return (
     <div>
@@ -21,7 +26,7 @@ function App() {
       </div>
       <div className="obj">
         <h1 className="heading">Deployment Cluster</h1>
-        <Dc val={dcobj} />
+        <Dc val={dc} />
       </div>
     </div>
   );
