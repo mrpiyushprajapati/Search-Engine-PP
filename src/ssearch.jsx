@@ -2,9 +2,10 @@ import Data from "./samplejson.json";
 import { useEffect, useState } from "react";
 import AddIcon from "@material-ui/icons/Add";
 
-function Search({ mval, setDcobj }) {
+function Search({ mval, dcobj, setDcobj }) {
   const [list, setList] = useState();
   const [searchTerm, setSearchterm] = useState("");
+  const [dco, setDco] = useState([]);
 
   useEffect(() => {
     if (!mval) {
@@ -17,6 +18,7 @@ function Search({ mval, setDcobj }) {
       })?.title1
     );
   }, [mval]);
+
   return (
     <div>
       <input
@@ -29,9 +31,6 @@ function Search({ mval, setDcobj }) {
       {list &&
         Object.entries(list)
           .filter((val) => {
-            {
-              /* console.log(val); */
-            }
             if (searchTerm === "") {
               return val;
             } else if (
@@ -47,7 +46,7 @@ function Search({ mval, setDcobj }) {
                   {val}{" "}
                   <button
                     onClick={() => {
-                      setDcobj(val);
+                      setDcobj([...dcobj, val]);
                     }}
                   >
                     <AddIcon />

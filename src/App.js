@@ -6,12 +6,7 @@ import Dc from "./dc";
 
 function App() {
   const [val, setVal] = useState();
-  const [dcobj, setDcobj] = useState();
-  const [dc, setDc] = useState([]);
-
-  setDc((prevNotes) => {
-    return [...prevNotes, dcobj];
-  });
+  const [dcobj, setDcobj] = useState([]);
 
   return (
     <div>
@@ -22,11 +17,11 @@ function App() {
       </div>
       <div className="obj">
         <h1 className="heading">S Objects</h1>
-        <SSearch mval={val} setDcobj={setDcobj} />
+        <SSearch mval={val} dcobj={dcobj} setDcobj={setDcobj} />
       </div>
       <div className="obj">
         <h1 className="heading">Deployment Cluster</h1>
-        <Dc val={dc} />
+        <Dc val={dcobj} />
       </div>
     </div>
   );
