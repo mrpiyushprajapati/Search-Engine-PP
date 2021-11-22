@@ -5,7 +5,6 @@ import AddIcon from "@material-ui/icons/Add";
 function Search({ mval, dcobj, setDcobj }) {
   const [list, setList] = useState();
   const [searchTerm, setSearchterm] = useState("");
-  const [dco, setDco] = useState([]);
 
   useEffect(() => {
     if (!mval) {
